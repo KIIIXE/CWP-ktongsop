@@ -5,8 +5,6 @@ def checkmate(board: str):
     rows = []
 
     for line in lines:
-        line = line.strip()
-
         if line != "":
             rows.append(line)
 
@@ -30,9 +28,11 @@ def checkmate(board: str):
                 king_x = i
                 king_y = j
                 king_count = king_count + 1
-
+                # print("King position:", king_x, king_y)
+                # print("King count:", king_count)
+    
     if king_count != 1:
-        print("Not found King")
+        print("Not found King or more than one King")
         return
 
     directions = [
@@ -55,7 +55,7 @@ def checkmate(board: str):
 
             piece = rows[x][y]
 
-            if piece != '.' and piece != ' ':
+            if piece != '.' and piece != ' ' and piece != 'x' and piece  != '0' and piece != '*' and piece != '#':
 
                 is_straight = (move_x == 0 or move_y == 0)
                 is_diagonal = (move_x != 0 and move_y != 0)

@@ -9,7 +9,7 @@ def main():
 
       board = """\
 ..
-.K\
+..\
       """
       checkmate(board)
 if __name__ == "__main__":

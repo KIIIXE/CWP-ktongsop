@@ -32,7 +32,7 @@ def checkmate(board: str):
                 king_count = king_count + 1
 
     if king_count != 1:
-        print("Error")
+        print("Not found King")
         return
 
     directions = [
